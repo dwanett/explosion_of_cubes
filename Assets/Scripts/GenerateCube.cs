@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class GenerateCube : MonoBehaviour
 {
@@ -10,7 +11,15 @@ public class GenerateCube : MonoBehaviour
     [SerializeField] private int _maxCountGenerate;
     [SerializeField] private float _radiusGenerate;
     public event Action<List<Collider>> GeneratedCubes;
-    private int _chanceSplit = 100;
+    private int _maxChanceSplit = 100;
+    private int _chanceSplit;
+    private int _decreaceChance = 2;
+
+    private void Awake()
+    {
+        _chanceSplit = _maxChanceSplit;
+    }
+
     private void OnEnable()
     {
         _controllerCube.ClikedCube += GenerateCubes;
@@ -27,7 +36,7 @@ public class GenerateCube : MonoBehaviour
         int count = random.Next(_minCountGenerate, _maxCountGenerate + 1);
         List<Collider> cubes = new List<Collider>();
         
-        if (_chanceSplit > 0)
+        if (random.Next(_maxChanceSplit + 1) < _chanceSplit)
         {
             for (int i = 0; i < count; i++)
             {
@@ -35,7 +44,7 @@ public class GenerateCube : MonoBehaviour
                 oldCubePosition.y += _radiusGenerate;
                 GameObject newCube = Instantiate(_controllerCube.gameObject, UnityEngine.Random.insideUnitSphere * _radiusGenerate + oldCubePosition, Quaternion.identity);
                 newCube.GetComponent<Renderer>().material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
-                newCube.GetComponent<GenerateCube>()._chanceSplit = _chanceSplit / 2;
+                newCube.GetComponent<GenerateCube>()._chanceSplit = _chanceSplit / _decreaceChance;
                 newCube.transform.localScale /= _scaleReduce;
                 
                 cubes.Add(newCube.GetComponent<Collider>());

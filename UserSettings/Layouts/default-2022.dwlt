@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 479
-    y: 97
+    x: 181
+    y: 126
     width: 2009
     height: 1121
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 705
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -297,8 +297,8 @@ MonoBehaviour:
     y: 0
     width: 385
     height: 1071
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -324,8 +324,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1032
-    y: 127
+    x: 734
+    y: 156
     width: 1069
     height: 684
   m_SerializedDataModeController:
@@ -424,8 +424,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 479
-    y: 127
+    x: 181
+    y: 156
     width: 193
     height: 684
   m_SerializedDataModeController:
@@ -487,8 +487,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 673
-    y: 127
+    x: 375
+    y: 156
     width: 357
     height: 684
   m_SerializedDataModeController:
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.24726284, y: -0.018318202, z: 0.00467714, w: -0.96876925}
     speed: 2
-    m_Value: {x: -0.24726157, y: -0.01831811, z: 0.0046771164, w: -0.9687643}
+    m_Value: {x: -0.24726284, y: -0.018318202, z: 0.00467714, w: -0.9687692}
   m_Size:
     m_Target: 33.44335
     speed: 2
@@ -1031,8 +1031,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 479
-    y: 832
+    x: 181
+    y: 861
     width: 1623
     height: 345
   m_SerializedDataModeController:
@@ -1248,8 +1248,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2103
-    y: 127
+    x: 1805
+    y: 156
     width: 384
     height: 1050
   m_SerializedDataModeController:
