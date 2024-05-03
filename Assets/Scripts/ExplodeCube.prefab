@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a53cdbede4fce4d857dc7512dc0b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controllerCube: {fileID: 8306046027623438649}
+  _cube: {fileID: 8306046027623438649}
   _scaleReduce: 2
   _minCountGenerate: 2
   _maxCountGenerate: 6
@@ -178,6 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _generateCube: {fileID: 5527193937484153001}
-  _controllerCube: {fileID: 8306046027623438649}
+  _cube: {fileID: 8306046027623438649}
   _forceExplode: 1000
   _radiusExplode: 10

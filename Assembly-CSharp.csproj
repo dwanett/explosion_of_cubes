@@ -45,9 +45,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ControllerCube.cs" />
-    <Compile Include="Assets\Scripts\GenerateCube.cs" />
-    <Compile Include="Assets\Scripts\ExplodeCube.cs" />
+    <Compile Include="Assets\Scripts\GeneratorCubes.cs" />
+    <Compile Include="Assets\Scripts\Cube.cs" />
+    <Compile Include="Assets\Scripts\Explode.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
