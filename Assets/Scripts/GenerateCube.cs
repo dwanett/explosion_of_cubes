@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GenerateCube : MonoBehaviour
@@ -8,7 +9,7 @@ public class GenerateCube : MonoBehaviour
     [SerializeField] private int _minCountGenerate;
     [SerializeField] private int _maxCountGenerate;
     [SerializeField] private float _radiusGenerate;
-    public event Action GeneratedCubes;
+    public event Action<List<Collider>> GeneratedCubes;
     private int _chanceSplit = 100;
     private void OnEnable()
     {
@@ -24,7 +25,8 @@ public class GenerateCube : MonoBehaviour
     {
         System.Random random = new System.Random();
         int count = random.Next(_minCountGenerate, _maxCountGenerate + 1);
-
+        List<Collider> cubes = new List<Collider>();
+        
         if (_chanceSplit > 0)
         {
             for (int i = 0; i < count; i++)
@@ -35,9 +37,11 @@ public class GenerateCube : MonoBehaviour
                 newCube.GetComponent<Renderer>().material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
                 newCube.GetComponent<GenerateCube>()._chanceSplit = _chanceSplit / 2;
                 newCube.transform.localScale /= _scaleReduce;
+                
+                cubes.Add(newCube.GetComponent<Collider>());
             }
         }
 
-        GeneratedCubes?.Invoke();
+        GeneratedCubes?.Invoke(cubes);
     }
 }

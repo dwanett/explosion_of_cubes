@@ -17,13 +17,11 @@ public class ExplodeCube : MonoBehaviour
         _generateCube.GeneratedCubes -= Explode;
     }
     
-    private void Explode()
+    private void Explode(List<Collider> cubes)
     {
         Vector3 explosionPos = _controllerCube.gameObject.transform.position;
-        List<Collider> colliders = new List<Collider>(Physics.OverlapSphere(explosionPos, _radiusExplode));
-        colliders.Remove(_controllerCube.gameObject.GetComponent<Collider>());
         
-        foreach (Collider hit in colliders)
+        foreach (Collider hit in cubes)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
